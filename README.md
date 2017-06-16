@@ -51,7 +51,7 @@ http://localhost:8083/user-consumer/getUser?userID=1
 - Before you build docker image:
    - Edit application.properties file and replace localhost with appropreate ip address.
    - Edit pom.xml file and enter appropriate value for <docker.image.prefix>.
-- If you intend to push docker images to your private repository such as Azure ACR or Amazone ECR, edit the pom.xml file from each service and enter appropreate values for <serverId> and  <repositoryUrl>.
+- If you intend to push docker images to your private repository such as Azure ACR or Amazone ECR, edit the pom.xml file from each service and enter appropreate values for ```<serverId>``` and  ```<repositoryUrl>```.
 - Here is the maven command to build docker image:
 
 ```
