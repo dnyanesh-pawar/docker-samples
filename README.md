@@ -1,6 +1,6 @@
 # Dockerized Spring Boot Microservices
 
-This sample application consist of spring boot registry service (Eureka), edge service (Zuul), sample user app and consumer application. 
+This sample application consist of spring boot registry service (Netflix Eureka), edge service (Netflix Zuul), sample user app and consumer application. 
 
 
 
@@ -50,7 +50,7 @@ http://localhost:8083/user-consumer/getUser?userID=1
 - You can use docker engine or maven plugin to build docker image.
 - Before you build docker image:
    - Edit application.properties file and replace localhost with appropreate ip address.
-   - Edit pom.xml file and enter appropriate value for <docker.image.prefix>.
+   - Edit pom.xml file and enter appropriate value for ```<docker.image.prefix>```.
 - If you intend to push docker images to your private repository such as Azure ACR or Amazone ECR, edit the pom.xml file from each service and enter appropreate values for ```<serverId>``` and  ```<repositoryUrl>```.
 - Here is the maven command to build docker image:
 
