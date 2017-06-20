@@ -18,11 +18,11 @@ Download or clone git repository, then use maven to build projects. You can also
 - Service Registry:
 Spring Boot Eureka (Netflix Eureka) service registry server.
 - Edge Service
-Spring Boot Zuul (Netflix Zuul) server. 
+Spring Boot Zuul (Netflix Zuul) server.
 - User app:
 This is the sample spring boot REST API, exposes 2 end points. 
 
- - /registerUser
+    - /registerUser
 
 Json structure
 
@@ -34,16 +34,35 @@ Json structure
 }
 
 Example:
-http://localhost:8083/user-consumer/registerUser
+http://localhost:8083/userapp/registerUser
 
 ```
- - /getUser
+    - /getUser
 
 ```
 Example:
-http://localhost:8083/user-consumer/getUser?userID=1
+http://localhost:8083/userapp/getUser?userID=1
 
 ```
+
+- User app consumer: 
+This is the sample spring boot application, exposes similar end point as user app and internally calls user app using load balanced REST template.
+You can either call useapp or user-consumer end points via zuul.
+
+```
+    - /registerUSEr
+    
+    Example:
+    http://localhost:8083/user-consumer/registerUser
+    
+    - /getUser
+    
+    Example:
+    http://localhost:8083/user-consumer/getUser?userID=1
+    
+```
+
+If application runs successfully, you are ready to build docker images.
 
 ## Docker build
 
