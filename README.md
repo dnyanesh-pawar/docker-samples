@@ -22,11 +22,11 @@ Spring Boot Zuul (Netflix Zuul) server.
 - User app:
 This is the sample spring boot REST API, exposes 2 end points. 
 
-    - /registerUser
+```
+- /registerUser
     
 Json structure
 
-```
 
 {
 	"userId":1,
@@ -37,17 +37,9 @@ Json structure
 Example:
 http://localhost:8083/userapp/registerUser
 
-```
+- /getUser
 
 
-
-    - /getUser    
-
-
-
-
-	
-```
 Example:
 http://localhost:8083/userapp/getUser?userID=1
 
@@ -57,17 +49,13 @@ http://localhost:8083/userapp/getUser?userID=1
 This is the sample spring boot application, exposes similar end point as user app and internally calls user app using load balanced REST template.
 You can either call useapp or user-consumer end points via zuul.
 
-    - /registerUser
-    
-```   
+```
+    - /registerUser  
 
     Example:
     http://localhost:8083/user-consumer/registerUser 
     
-```
     - /getUser
-    
-```    
     
     Example:
     http://localhost:8083/user-consumer/getUser?userID=1
