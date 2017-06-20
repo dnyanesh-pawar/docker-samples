@@ -27,6 +27,7 @@ This is the sample spring boot REST API, exposes 2 end points.
 Json structure
 
 ```
+
 {
 	"userId":1,
 	"name":"user_name",
@@ -60,6 +61,7 @@ You can either call useapp or user-consumer end points via zuul.
 ```
 
     - /getUser
+    
     
 ```    
     
