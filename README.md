@@ -38,7 +38,8 @@ Example:
 http://localhost:8083/userapp/registerUser
 
 ```
-	- /getUser    
+
+    - /getUser    
 	
 ```
 Example:
@@ -58,7 +59,8 @@ You can either call useapp or user-consumer end points via zuul.
     http://localhost:8083/user-consumer/registerUser 
     
 ```
-	- /getUser
+
+    - /getUser
     
 ```    
     
