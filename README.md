@@ -38,7 +38,14 @@ Example:
 http://localhost:8083/userapp/registerUser
 
 ```
+
+
+
     - /getUser    
+
+
+
+
 	
 ```
 Example:
